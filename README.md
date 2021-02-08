@@ -1,4 +1,4 @@
-## Adthena - Technical Assignment
+## Bert Fine-tuning
 
 ### Data
 Train set - trainSet.csv with 606,823 search terms examples and 1419 categories. The file contains the two columns, the search term and the search term category.
