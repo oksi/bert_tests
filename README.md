@@ -6,12 +6,14 @@ Test set - candidateTestSet.txt with 67,424 search terms examples.
 
 ### Install
 
-# using pip
+**using pip**
+``` 
 pip install -r requirements.txt
-
-# using Conda
+```
+**using Conda**
+```
 conda create --name <env_name> --file requirements.txt
-
+```
 
 ### Problem Description
 For this multi-class classification problem, I decided to use a pre-trained BERT model. I based my choice on:
