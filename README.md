@@ -5,11 +5,14 @@ Train set - trainSet.csv with 606,823 search terms examples and 1419 categories.
 Test set - candidateTestSet.txt with 67,424 search terms examples.
 
 ### Install
-Install Huggingface’s transformers library and pytorch. Execute the code below to install the library. 
-```
-!pip install transformers
-!pip install torch
-```
+
+# using pip
+pip install -r requirements.txt
+
+# using Conda
+conda create --name <env_name> --file requirements.txt
+
+
 ### Problem Description
 For this multi-class classification problem, I decided to use a pre-trained BERT model. I based my choice on:
 - BERT is based on the Transformer architecture.
@@ -107,22 +110,21 @@ Epoch 100:
 
 #### 3.2 bert_version_2
 1. train/test split - 0.9/0.1
-Total Epochs - 3
+Total Epochs - 10
 
-Epoch 1:
-* Training Loss:       3.376
-* Validation Loss:     2.131
-* F1 Score (Weighted): 0.534
+Training and validation loss per epoch:  
+{'train_loss': {0: 2.086920686201044, 1: 1.6355017095855726, 2: 1.3498354319099097, 3: 1.137212604387312, 4: 0.9678924457402149, 5: 0.8322872788121305, 6: 0.7217029103107906, 7: 0.6367876326733275, 8: 0.5787355654548871, 9: 0.5527514701573494}, 
 
-Epoch 2:
-* Training Loss:     1.818
-* Validation Loss:     1.773
-* F1 Score (Weighted): 0.594
+'val_loss': {0: 1.9286334211644667, 1: 1.7721876474379739, 2: 1.6975179821087822, 3: 1.6632509146631156, 4: 1.6556448559474417, 5: 1.6491981077494358, 6: 1.6622973260293685, 7: 1.6665834875965446, 8: 1.6698714664656225, 9: 1.6698714664656225}}
 
-Epoch 3:
-* Training Loss:       1.374
-* Validation Loss:     1.670
-* F1 Score (Weighted): 0.613
+Epoch 8:
+F1 Score (Weighted): 0.637
+
+Epoch 9:
+F1 Score (Weighted): 0.638
+
+Epoch 10:
+F1 Score (Weighted): 0.638
 
 #### 3.3 bert_version_3
 train/test split - 0.9/0.1
